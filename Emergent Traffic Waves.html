@@ -130,12 +130,12 @@
     const ctx = canvas.getContext("2d");
 
     const params = {
-      N_CARS: 50, ROAD_LEN: 500, v0: 10, a_max: 0.4, b: 3.4, T: 0.7, s0: 2.1
+      Number_of_cars: 50, Road_length: 500, v0: 10, a_max: 0.4, b: 3.4, T: 0.7, s0: 2.1
     };
 
     const sliders = [
-      { name: "N_CARS", min: 20, max: 150, step: 1 },
-      { name: "ROAD_LEN", min: 200, max: 2000, step: 10 },
+      { name: "Number_of_cars", min: 20, max: 150, step: 1 },
+      { name: "Road_length", min: 200, max: 2000, step: 10 },
       { name: "v0", min: 5, max: 40, step: 0.5 },
       { name: "a_max", min: 0.1, max: 3, step: 0.1 },
       { name: "b", min: 0.1, max: 5, step: 0.1 },
@@ -165,8 +165,8 @@
     const cy = canvas.height / 2;
 
     function reset() {
-      const N = params.N_CARS;
-      const L = params.ROAD_LEN;
+      const N = params.Number_of_cars;
+      const L = params.Road_length;
       positions = Array.from({ length: N }, (_, i) => i * L / N);
       velocities = Array(N).fill(params.v0).map(v => v + (Math.random() - 0.5) * 4);
       velocities[0] -= 5;
@@ -179,8 +179,8 @@
     }
 
     function update() {
-      const N = params.N_CARS;
-      const L = params.ROAD_LEN;
+      const N = params.Number_of_cars;
+      const L = params.Road_length;
       const new_pos = [...positions];
       const new_vel = [...velocities];
       colors = Array(N).fill("blue");
@@ -215,7 +215,7 @@
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < positions.length; i++) {
-        const angle = (positions[i] / params.ROAD_LEN) * 2 * Math.PI;
+        const angle = (positions[i] / params.Road_length) * 2 * Math.PI;
         const x = cx + radius * Math.cos(angle);
         const y = cy + radius * Math.sin(angle);
         ctx.beginPath();
