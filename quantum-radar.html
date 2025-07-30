@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Radar | PhysSim</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Dark Mode Config -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-to-br from-slate-50 to-white text-gray-800 dark:from-gray-900 dark:to-gray-800 dark:text-gray-100 font-sans">
+    <!-- Page Container -->
+    <main class="max-w-3xl mx-auto px-4 py-12">
+      <!-- Breadcrumb -->
+      <nav class="text-sm text-gray-500 dark:text-gray-300 mb-6">
+        <a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-600 dark:text-gray-400">Quantum Radar</span>
+      </nav>
+
+      <!-- Article Card -->
+      <article class="bg-white dark:bg-gray-900 shadow-lg rounded-2xl p-8 border border-gray-100 dark:border-gray-700">
+        <!-- Header -->
+        <header class="mb-10">
+          <h1 class="text-4xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Quantum Radar</h1>
+          <p class="text-lg text-gray-700 dark:text-gray-300">
+            Quantum radar is an advanced type of radar system that uses
+            principles of quantum mechanics—particularly quantum entanglement or
+            quantum illumination—to detect and track objects with potentially
+            higher sensitivity, lower noise, and greater resistance to jamming
+            or stealth technologies than traditional radar systems.
+          </p>
+        </header>
+
+        <!-- Key Concepts -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4">Key Concepts</h2>
+
+          <div class="space-y-6">
+            <div class="transition-transform duration-300 hover:translate-x-1">
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Quantum Illumination</h3>
+              <p>
+                This is the most practical approach studied so far. It uses
+                <strong>entangled photon pairs</strong>: one photon (the "signal")
+                is sent toward the target, and the other (the "idler") is kept.
+                Even if entanglement is lost during transmission, subtle quantum
+                correlations help distinguish the reflected signal from background
+                noise better than classical radar can.
+              </p>
+            </div>
+
+            <div class="transition-transform duration-300 hover:translate-x-1">
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Quantum Entanglement</h3>
+              <p>
+                Two particles are entangled if their states are linked, even when
+                separated by large distances. Theoretically, entanglement could be
+                used to identify if a photon returned to the receiver is the same
+                one that was sent, improving detection accuracy.
+              </p>
+            </div>
+
+            <div class="transition-transform duration-300 hover:translate-x-1">
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Low Probability of Intercept (LPI)</h3>
+              <p>
+                Quantum radar could potentially be much harder to detect and jam
+                because it uses fewer photons and relies on quantum effects,
+                making it stealthier than conventional radar.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Advantages -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4">
+            Advantages Over Classical Radar
+          </h2>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+            <li>
+              <strong>Better Target Detection in Noisy Environments:</strong>
+              Can outperform classical radar in environments with high thermal noise
+              or clutter.
+            </li>
+            <li>
+              <strong>Enhanced Stealth Detection:</strong> Could potentially detect
+              stealth aircraft better by picking up weak reflections that classical
+              radar misses.
+            </li>
+            <li>
+              <strong>Improved Resolution and Sensitivity:</strong> Quantum
+              correlations can improve the signal-to-noise ratio (SNR).
+            </li>
+          </ul>
+        </section>
+
+        <!-- Challenges -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4">Challenges</h2>
+          <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+            <li>
+              <strong>Technological Complexity:</strong> Requires advanced quantum
+              optics and cryogenic systems.
+            </li>
+            <li>
+              <strong>Loss of Entanglement:</strong> Entanglement tends to degrade
+              over long distances or in lossy media.
+            </li>
+            <li>
+              <strong>Scalability:</strong> Building a working, large-scale,
+              real-world quantum radar is still a major engineering challenge.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Status -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4">Status</h2>
+          <p>
+            As of now, quantum radar is mostly experimental or theoretical. Some
+            defense agencies and research labs (e.g., in the U.S., Canada, and
+            China) have demonstrated early-stage systems or prototypes, but
+            widespread deployment is still in the future.
+          </p>
+        </section>
+
+        <!-- Back Link -->
+        <div class="mt-8">
+          <a href="index.html" class="inline-block text-indigo-600 dark:text-indigo-400 hover:underline text-sm">
+            ← Back to Home
+          </a>
+        </div>
+      </article>
+    </main>
+
+    <!-- Dark Mode Toggle Script (optional) -->
+    <script>
+      // Example toggle for future button (not displayed yet)
+      // document.body.classList.toggle('dark');
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

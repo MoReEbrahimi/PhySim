@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergent Traffic Waves | PhysSim</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-to-br from-slate-50 to-white text-gray-800 dark:from-gray-900 dark:to-gray-800 dark:text-gray-100 font-sans">
+    <main class="max-w-3xl mx-auto px-4 py-12">
+      <nav class="text-sm text-gray-500 dark:text-gray-300 mb-6">
+        <a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-600 dark:text-gray-400">Phantom Traffic Jams</span>
+      </nav>
+
+      <article class="bg-white dark:bg-gray-900 shadow-lg rounded-2xl p-8 border border-gray-100 dark:border-gray-700">
+        <header class="mb-10">
+          <h1 class="text-4xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">
+            Emergent Traffic Waves: A Simulation of Phantom Jams
+          </h1>
+        </header>
+
+        <section class="mb-10">
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Introduction</h2>
+          <p>
+            Traffic jams that appear seemingly out of nowhere — without an accident, construction, or any visible obstruction — are known as <strong>phantom traffic jams</strong> or <strong>stop-and-go waves</strong>. These jams emerge from local interactions between drivers, even when all are trying to maintain steady speed.
+          </p>
+          <p class="mt-4">
+            From a physics standpoint, it's a classic example of <strong>emergent behavior</strong>: large-scale patterns arising from simple rules.
+          </p>
+        </section>
+
+        <section class="mb-10">
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Model Overview</h2>
+          <p>
+            The simulation models traffic on a <strong>circular road</strong> using the <strong>Intelligent Driver Model (IDM)</strong>. Each car has parameters such as:
+          </p>
+          <ul class="list-disc pl-6 mt-4 space-y-2">
+            <li>Position, velocity, acceleration</li>
+            <li>Desired speed (<code>v₀</code>), safety time gap (<code>T</code>)</li>
+            <li>Minimum distance (<code>s₀</code>), max acceleration (<code>aₘₐₓ</code>), comfortable braking (<code>b</code>)</li>
+          </ul>
+          <p class="mt-4">
+            Small random changes can trigger braking chains and produce traffic waves moving <em>backward</em>.
+          </p>
+        </section>
+
+        <section class="mb-10">
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">How the Simulation Works</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Road is a circle, cars shown as moving dots.</li>
+            <li>Sliders adjust car count, road length, speed, acceleration, etc.</li>
+            <li>Color-coded cars:
+              <ul class="list-disc pl-6 mt-1">
+                <li><span class="text-red-500 font-medium">Red</span>: braking hard</li>
+                <li><span class="text-orange-400 font-medium">Orange</span>: following too close</li>
+                <li><span class="text-blue-500 font-medium">Blue</span>: normal motion</li>
+              </ul>
+            </li>
+            <li>Live charts show mean speed and number of red/orange cars.</li>
+          </ul>
+        </section>
+
+        <section class="mb-10">
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Exploring the Dynamics</h2>
+          <ol class="list-decimal pl-6 space-y-2">
+            <li>Increase car density → instability appears faster</li>
+            <li>Introduce small disturbance to one car's speed</li>
+            <li>Observe the backward-traveling braking waves</li>
+          </ol>
+          <p class="mt-4">
+            Try adjusting braking parameters, reaction times, and gaps to explore stability limits.
+          </p>
+        </section>
+
+        <section class="mb-10">
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Conclusion</h2>
+          <p>
+            This simulation shows how real-world traffic waves can arise from simple car-following rules. Beyond education, such models have relevance in traffic control, autonomous driving, and city design.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">🚗 Try It Yourself!</h2>
+          <p>
+            You can run this simulation interactively with Python + Pygame. It's ideal for physics students, engineers, and anyone curious about the hidden complexity of everyday traffic.
+          </p>
+        </section>
+
+        <div class="mt-10">
+          <a href="index.html" class="inline-block text-indigo-600 dark:text-indigo-400 hover:underline text-sm">← Back to Home</a>
+        </div>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
